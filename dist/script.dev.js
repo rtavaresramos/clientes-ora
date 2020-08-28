@@ -42,6 +42,7 @@ function loadDb() {
           auxUsers = "<div id=\"user-".concat(i, "\" class=\"card\"\">\n                <header class=\"card-header\">\n                <div class=\"media-content\">\n                  <p class=\"title is-4\">").concat(users[i].name, "</p>\n                  <p class=\"subtitle is-6\">").concat(users[i].email, "</p>\n                </div>\n                  <span class=\"mt-2\">#").concat(i, "</span>\n                  <a href=\"#\" class=\"card-header-icon\" aria-label=\"more options\">\n                    <span class=\"icon\">\n                      <i class=\"fas fa-angle-down\" aria-hidden=\"true\"></i>\n                    </span>\n                  </a>\n                </header>\n                <div class=\"card-content\">\n                  <div class=\"content\">\n                 \n                    ").concat(users[i].situation, "\n                  </div>\n                </div>\n                </div>") + auxUsers;
         } else if (i + 1 == users.length && auxUsers == '') {
           document.getElementById('section').style.display = 'flex';
+          document.getElementById('section').style.justifyContent = 'center';
           auxUsers = "<div class=\"notification is-warning is-light\">\n                  Nenhum cliente cadastrado!\n                </div>";
         }
       }

@@ -330,7 +330,15 @@ function printUsers(qty){
               <a href="#user-${i}" 
               onclick="handleDeleteUser(${i})" class="card-footer-item">Deletar</a>
             </footer>
-            </div>` + auxUsers }
+            </div>` + auxUsers }else if(i+1 == users.length && auxUsers == ''){
+
+              document.getElementById('section').style.display = 'flex'
+              document.getElementById('section').style.justifyContent = 'center'
+
+              auxUsers =  `<div class="notification is-warning is-light">
+              Nenhum cliente cadastrado!
+            </div>`
+        }
       
     }
 

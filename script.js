@@ -98,6 +98,8 @@ function loadDb(){
                 </div>` + auxUsers }else if(i+1 == users.length && auxUsers == ''){
 
                   document.getElementById('section').style.display = 'flex'
+                  document.getElementById('section').style.justifyContent = 'center'
+
                   auxUsers =  `<div class="notification is-warning is-light">
                   Nenhum cliente cadastrado!
                 </div>`
