@@ -74,6 +74,7 @@ function loadDb(){
           console.log(users[i])
           
               if(users[i].status!='Deleted'){
+                document.getElementById('section').style.display = 'grid'
                 
                 auxUsers =  `<div id="user-${i}" class="card"">
                 <header class="card-header">
@@ -95,6 +96,8 @@ function loadDb(){
                   </div>
                 </div>
                 </div>` + auxUsers }else if(i+1 == users.length && auxUsers == ''){
+
+                  document.getElementById('section').style.display = 'flex'
                   auxUsers =  `<div class="notification is-warning is-light">
                   Nenhum cliente cadastrado!
                 </div>`
