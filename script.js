@@ -2,18 +2,19 @@ function loadDb(){
     // Usable variables:
       
       let result;
-      var paramsQty = 6
+      var paramsQty = 7
       var auxUsers = []
     // Objects:
     
     function usersDb(
-      date, name,  email, situation, status, editUrl)
+      date, name,  email, situation, status, partnerShip, editUrl)
         {
         this.date = date,
         this.name = name,
         this.email = email,
         this.situation = situation,
         this.status = status,
+        this.partnerShip = partnerShip,
         this.editUrl = editUrl
       }
     
@@ -49,6 +50,7 @@ function loadDb(){
         result[count+3],
         result[count+4],
         result[count+5],
+        result[count+6],
      )}
     
 
@@ -78,9 +80,12 @@ function loadDb(){
                 
                 auxUsers =  `<div id="user-${i}" class="card"">
                 <header class="card-header">
-                <div class="media-content">
+                <div class="media-content d-flex align-center">
+                  <div class="info">
                   <p class="title is-4">${users[i].name}</p>
                   <p class="subtitle is-6">${users[i].email}</p>
+                  </div>
+                  <span class="tag is-warning mx-5">${users[i].partnerShip}</span>
                 </div>
                   <span class="mt-2">#${i}</span>
                   <a href="#" class="card-header-icon" aria-label="more options">

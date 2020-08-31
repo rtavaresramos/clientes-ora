@@ -1,0 +1,2 @@
+/admin/* https://partner.oraadvogados.com.br/management.html:splat 200
+/novo-cadastro/* https://partner.oraadvogados.com.br/register.html:splat 200

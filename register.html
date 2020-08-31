@@ -52,17 +52,25 @@
             <div class="field">
                 <label class="label">Explique o caso do cliente</label>
                 <div class="control has-icons-left has-icons-right">
-                <input class="input" type="text" placeholder="Exemplo: João Nascimento foi negativado indevidamente ..." 
+                <input class="textarea" type="text" placeholder="Exemplo: João Nascimento foi negativado indevidamente ..." 
                 name="entry.1906297420" required>
-                <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                </span>
+
                 </div>
             </div>
+
+            <div class="field">
+              <label class="label">Explique o formato da parceiria</label>
+              <div class="control has-icons-left has-icons-right">
+              <input class="textarea" type="text" placeholder="Exemplo: 40% Ora Advogados / 60% Parceiro" 
+              name="entry.36026748" required>
+
+              </div>
+          </div>
+
             <div class="field" style="display: none;">
-                <label class="label">Explique o caso do cliente</label>
+                <label class="label">Status</label>
                 <div class="control has-icons-left has-icons-right">
-                <input class="textarea" type="text" value="Active" placeholder="Exemplo: João Nascimento foi negativado indevidamente ..." 
+                <input class="textarea" type="text" value="Active" 
                 name="entry.2015685881" required>
                 <span class="icon is-small is-left">
                     <i class="fas fa-envelope"></i>
@@ -81,22 +89,7 @@
     </div>
   </section>
 
-  <section class="section" >
-    <h1 class="title ora-center">
-      Clientes
-   </h1>
-    <div id="section" class="columns">
-      
-    </div>
-  </section>
-
-  <!--  -->
-  <section id="edit-modal" class="section" onload="closeModal()">
-
-  </section>
-
-
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <script src="./register.js"></script>
+  <script src="./crud.js"></script>
   </body>
 </html>

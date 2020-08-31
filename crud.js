@@ -26,18 +26,19 @@ function handleDeleteUser(e){
 // Usable variables:
   
 let result;
- var paramsQty = 6
+ var paramsQty = 7
 
 // Objects:
 
 function usersDb(
-  date, name,  email, situation, status, editUrl)
+  date, name,  email, situation, status, partnerShip, editUrl)
     {
     this.date = date,
     this.name = name,
     this.email = email,
     this.situation = situation,
     this.status = status,
+    this.partnerShip = partnerShip,
     this.editUrl = editUrl
   }
   
@@ -74,6 +75,7 @@ function usersDb(
         result[count+3],
         result[count+4],
         result[count+5],
+        result[count+6],
      )}
   
 
@@ -116,25 +118,28 @@ function usersDb(
   </form>`
 
 document.shouldDeletForms.submit()
-handleForm()
+setTimeout(() => {
+  window.location='/admin'
+}, 750);
 
 })}
 function handleEditForms(e){
 // Usable variables:
   
 let result;
- var paramsQty = 6
+ var paramsQty = 7
 
 // Objects:
 
 function usersDb(
-  date, name,  email, situation, status, editUrl)
+  date, name,  email, situation, status, partnerShip, editUrl)
     {
     this.date = date,
     this.name = name,
     this.email = email,
     this.situation = situation,
     this.status = status,
+    this.partnerShip = partnerShip,
     this.editUrl = editUrl
   }
       fetch(
@@ -169,8 +174,8 @@ function usersDb(
       result[count+3],
       result[count+4],
       result[count+5],
+      result[count+6],
    )}
-  
 setTimeout(() => {
   
   document.getElementById('edit-modal').style.display = 'flex'
@@ -192,14 +197,14 @@ setTimeout(() => {
     <div class="field">
                 <label class="label">Nome</label>
                 <div class="control">
-                <input class="input" type="text" placeholder="Exemplo: José Nascimento" name="entry.1058859935" value=""${users[e].name} required>
+                <input class="input" type="text" placeholder="Exemplo: José Nascimento" name="entry.1058859935" value="${users[e].name}" required>
                 </div>
             </div>
             
             <div class="field">
                 <label class="label">Email</label>
                 <div class="control has-icons-left has-icons-right">
-                <input class="input" type="text" placeholder="Exemplo: 'https://site/imagem.png'" name="entry.1822079083" value=""${users[e].email}required>
+                <input class="input" type="text" placeholder="Exemplo: 'https://site/imagem.png'" name="entry.1822079083" value="${users[e].email}" required>
                 <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                 </span>
@@ -209,12 +214,21 @@ setTimeout(() => {
                 <label class="label">Explique o caso do cliente</label>
                 <div class="control has-icons-left has-icons-right">
                 <input class="textarea" type="text" placeholder="Exemplo: João Nascimento foi negativado indevidamente ..." 
-                name="entry.1906297420" value=""${users[e].situation} required>
+                name="entry.1906297420" value="${users[e].situation}" required>
                 <span class="icon is-small is-left">
                     <i class="fas fa-envelope"></i>
                 </span>
                 </div>
             </div>
+
+            <div class="field">
+            <label class="label">Explique o formato da parceiria</label>
+            <div class="control has-icons-left has-icons-right">
+            <input class="textarea" type="text" value="${users[e].partnerShip}" placeholder="Exemplo: 40% Ora Advogados / 60% Parceiro" 
+            name="entry.36026748" required>
+
+            </div>
+        </div>
 
     <div class="field is-grouped">
         <div class="control">
@@ -234,18 +248,19 @@ function loadDb(){
 // Usable variables:
   
   let result;
-   var paramsQty = 6
+   var paramsQty = 7
   var auxUsers = []
 // Objects:
 
 function usersDb(
-  date, name,  email, situation, status, editUrl)
+  date, name,  email, situation, status, partnerShip, editUrl)
     {
     this.date = date,
     this.name = name,
     this.email = email,
     this.situation = situation,
     this.status = status,
+    this.partnerShip = partnerShip,
     this.editUrl = editUrl
   }
 
@@ -281,6 +296,7 @@ for(i=0 ; i < objSize ; i++){
     result[count+3],
     result[count+4],
     result[count+5],
+    result[count+6],
  )}
 
 
