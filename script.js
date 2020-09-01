@@ -84,15 +84,11 @@ function loadDb(){
                   <div class="info">
                   <p class="title is-4">${users[i].name}</p>
                   <p class="subtitle is-6">${users[i].email}</p>
-                  </div>
                   <span class="tag is-warning mx-5">${users[i].partnerShip}</span>
+                  </div>
                 </div>
-                  <span class="mt-2">#${i}</span>
-                  <a href="#" class="card-header-icon" aria-label="more options">
-                    <span class="icon">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </a>
+                  <span class="mt-3 mx-2">#${i}</span>
+                  
                 </header>
                 <div class="card-content">
                   <div class="content">

@@ -42,14 +42,14 @@ a{
 }
 .section{
     width: 100%;
-    max-width: 1240px;
     margin: 0 auto;
 }
 #section{
-    display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    display: flex;
+    max-width: 1240px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: start;
     margin: 0 auto;
 }
 .ora-center{
@@ -57,9 +57,18 @@ a{
     justify-content: center;
 }
 
-#section .card{
+#section .card .card-header{
+    width: 100%!important;
+    min-width: 315px;
+    margin: 0 auto;
+    align-items: flex-start;
+    padding: 20px;
+}
+#section .card {
+    min-width: 315px;
     width: 100%!important;
     margin: 0 auto;
+
 }
 .name{
     text-transform: uppercase;
@@ -71,12 +80,7 @@ a{
 }
 
 @media screen and (max-width: 650px){
-    #section{
-        display: grid;
-        grid-template-columns: 12fr;
-        grid-row-gap: 10px;
-        margin: 0 auto;
-    }
+    
     #edit-modal{
         top: 0;
         z-index: 50;
@@ -99,12 +103,7 @@ a{
     
 }
 @media screen and (max-width: 850px){
-    #section{
-        display: grid;
-        grid-template-columns: 6fr 6fr;
-        grid-row-gap: 10px;
-        margin: 0 auto;
-    }
+  
     #edit-modal{
         top: 0;
         z-index: 50;
